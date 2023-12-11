@@ -35,6 +35,10 @@ lowPrior.addEventListener('click', ()=>{
     currentPrior.setAttribute('id', 'low')
 })
 
+createButton.addEventListener('click', ()=>{
+    popUp.classList.remove('active')
+})
+
 
 // document.querySelector('div').removeAttribute('id');
 
