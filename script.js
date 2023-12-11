@@ -11,6 +11,8 @@ const currentPrior = document.querySelector('.current-priority')
 
 const createButton = document.querySelector('.create-task-btn')
 
+let columnName = document.querySelector('.column-name')
+
 addTaskBtn.addEventListener('click', ()=>{
     popUp.classList.add('active')
 })
@@ -36,7 +38,9 @@ lowPrior.addEventListener('click', ()=>{
 })
 
 createButton.addEventListener('click', ()=>{
-    popUp.classList.remove('active')
+
+    // here u should write function to pass data into column
+    popUp.classList.remove('active') 
 })
 
 
