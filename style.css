@@ -8,6 +8,7 @@ section{
     display: flex;
     flex-direction: column;
     width: 100%;
+    position: relative;
 }
 
 .pop-up-window{
@@ -16,8 +17,9 @@ section{
     background-color:gray;
     align-self: center ;
     display: none;
-    z-index: 1;
+    z-index: 999;
     padding: 2%;
+    position: absolute;
 }
 
 .pop-up-wrapper{
@@ -85,4 +87,40 @@ section{
 .create-task-btn{
     align-items: flex-end;
     justify-self: flex-end;
+}
+
+/* task */
+
+.tasks{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+}
+
+.tasks-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.task{
+    width: 350px;
+    height: 350px;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    box-sizing: border-box;
+}
+
+.status{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
