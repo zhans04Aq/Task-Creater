@@ -8,9 +8,24 @@
 </head>
 <body>
     <section>
-        <div class="pop-up-window active">
+        <div class="pop-up-window">
             <div class="pop-up-wrapper">
-                
+                <button class="close-pop-up">x</button>
+                <div class="pop-up-content">
+                    <h1>Create A Column</h1>
+                    <input placeholder="Columns Heading" type="text" class="column-name">
+                    <div class="priority">
+                        <div class="current-priority-wrapper">
+                            <p>Set priority</p>
+                            <div class="current-priority high"></div>
+                        </div>
+                        <div class="choose-priotiry">
+                            <div id="high" class="priority"></div>
+                            <div id="mid" class="priority"></div>
+                            <div id="low" class="priority"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <button class="addTaskBtn">add task</button>

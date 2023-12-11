@@ -1,0 +1,68 @@
+body{
+    margin: 0 auto;
+    padding: 5%;
+    box-sizing: border-box;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.pop-up-window{
+    width: 350px;
+    height: 400px;
+    background-color:gray;
+    align-self: center ;
+    display: none;
+    z-index: 1;
+}
+
+.active{
+    display: block;
+}
+
+.addTaskBtn{
+    width: 150px;
+    height: 50px;
+    align-self:flex-end;
+    /* justify-self: flex-end; */
+    position: fixed;
+}
+.high{
+    background-color:red;
+}
+
+.mid{
+    background-color:orange;
+}
+
+.low{
+    background-color:green;
+}
+
+#high{
+    background-color:red;
+}
+#mid{
+    background-color:orange;
+}
+#low{
+    background-color:green;
+}
+
+.priority{
+    width: 75px;
+    height: 75px;
+}
+
+.current-priority{
+    width: 25px;
+    height: 25px;
+}
+.current-priority-wrapper{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
