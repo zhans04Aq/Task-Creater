@@ -41,14 +41,15 @@ createButton.addEventListener('click', ()=>{
 
     let colName = document.querySelector('.column-name')
     let colVal = colName.value
+    let currPriorVal = ''
     if(currentPrior.getAttribute("id")=='high'){
-        // alert('high')
+        currPriorVal = 'high'
         popUp.classList.remove('active') 
     } else if (currentPrior.getAttribute('id')=='mid'){
-        // alert('mid')
+        currPriorVal ='mid'
         popUp.classList.remove('active') 
     } else if(currentPrior.getAttribute('id')=='low'){
-        // alert('low')
+        currPriorVal = 'low'
         popUp.classList.remove('active') 
     } else{
         alert('u did not set priority')
