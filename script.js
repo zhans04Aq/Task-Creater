@@ -39,11 +39,24 @@ lowPrior.addEventListener('click', ()=>{
 
 createButton.addEventListener('click', ()=>{
 
-    // here u should write function to pass data into column
-    popUp.classList.remove('active') 
+    let colName = document.querySelector('.column-name')
+    let colVal = colName.value
+    if(currentPrior.getAttribute("id")=='high'){
+        // alert('high')
+        popUp.classList.remove('active') 
+    } else if (currentPrior.getAttribute('id')=='mid'){
+        // alert('mid')
+        popUp.classList.remove('active') 
+    } else if(currentPrior.getAttribute('id')=='low'){
+        // alert('low')
+        popUp.classList.remove('active') 
+    } else{
+        alert('u did not set priority')
+    }
 })
+
 
 
 // document.querySelector('div').removeAttribute('id');
 
-// myPara.setAttribute("id", "id_you_like");
+// myPara.setAttribute("id", "i d_you_like");
