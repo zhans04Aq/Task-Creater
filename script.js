@@ -38,7 +38,6 @@ lowPrior.addEventListener('click', ()=>{
 })
 
 createButton.addEventListener('click', ()=>{
-
     let colName = document.querySelector('.column-name')
     let colVal = colName.value
     let currPriorVal = ''
