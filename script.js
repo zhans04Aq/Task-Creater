@@ -53,6 +53,12 @@ createButton.addEventListener('click', ()=>{
     } else{
         alert('u did not set priority')
     }
+    const taskDiv = document.createElement('div')   
+    taskDiv.classList.add('task')
+    const taskPriority = document.createElement('div')
+    taskPriority.classList.add('task-priority')
+    const taskName = document.createElement('h1')
+    document.querySelector('.task-wrapper').append(taskDiv)
 })
 
 
