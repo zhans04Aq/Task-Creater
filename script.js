@@ -13,6 +13,10 @@ const createButton = document.querySelector('.create-task-btn')
 
 let columnName = document.querySelector('.column-name')
 
+
+
+const todoWrapper = document.querySelector('.todo-wrapper')
+
 addTaskBtn.addEventListener('click', ()=>{
     popUp.classList.add('active')
 })
@@ -60,6 +64,51 @@ createButton.addEventListener('click', ()=>{
     const taskName = document.createElement('h1')
     document.querySelector('.task-wrapper').append(taskDiv)
 })
+
+// const addTodo = document.querySelector('.add-todo-task')
+
+
+
+document.querySelector('.add-todo-task').addEventListener('click', function () {
+    const todoWrapper = document.querySelector('.todo-wrapper');
+    
+    // Create a new 'todo' div
+    const todo = document.createElement('div');
+    todo.classList.add('todo');
+
+    // Create 'input' element for the todo
+    const todoInp = document.createElement('input');
+    todoInp.classList.add('todo-input');
+
+    // Create 'button' element to delete the todo
+    const deleteTodoBtn = document.createElement('button');
+    deleteTodoBtn.classList.add('delete-todo');
+    deleteTodoBtn.textContent = '-';
+    
+    // Add event listener to delete the todo when clicked
+    deleteTodoBtn.addEventListener('click', function () {
+        todo.remove();
+        adjustTaskHeight();
+    });
+
+    // Append the 'input' and 'button' elements to the 'todo' div
+    todo.appendChild(todoInp);
+    todo.appendChild(deleteTodoBtn);
+
+    // Append the 'todo' div to the 'todoWrapper'
+    todoWrapper.appendChild(todo);
+
+    // Adjust the height of the task div
+    adjustTaskHeight();
+});
+
+function adjustTaskHeight() {
+    const task = document.querySelector('.task');
+    const todoWrapper = document.querySelector('.todo-wrapper');
+    
+    // Set the height of the task div to the height of todoWrapper
+    task.style.minHeight = todoWrapper.clientHeight + 'px';
+}
 
 
 
