@@ -2,6 +2,7 @@ body{
     margin: 0 auto;
     padding: 5%;
     box-sizing: border-box;
+    background-color: #0A1828;
 }
 
 section{
@@ -14,7 +15,7 @@ section{
 .pop-up-window{
     width: 350px;
     height: 400px;
-    background-color:gray;
+    background-color: #fFFFFF;
     align-self: center ;
     display: none;
     z-index: 999;
@@ -65,11 +66,13 @@ section{
     height: 75px;
     display: flex;
     flex-direction: column;
+    border-radius: 50px;
 }
 
 .current-priority{
     width: 25px;
     height: 25px;
+    border-radius: 50px;
 }
 .current-priority-wrapper{
     display: flex;
@@ -91,22 +94,22 @@ section{
 
 /* task */
 
-.tasks{
+/* .tasks{
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     z-index: -1;
-}
+} */
 
-.tasks-wrapper{
+/* .tasks-wrapper{
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-}
+} */
 
 .task{
     width: 350px;
@@ -114,13 +117,31 @@ section{
     background-color: bisque;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     padding: 1%;
     box-sizing: border-box;
 }
 
-.status{
+.todo-wrapper{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+}
+
+.todo{
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
+}
+.add-todo-task{
+    width: 250px;
+    height: 70px;
+}
+
+.task-priority{
+    width: 100%;
+    height: 5%;
+    background-color: red;
+    border-radius: 50px;
 }
