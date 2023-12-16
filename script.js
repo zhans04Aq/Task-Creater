@@ -109,7 +109,8 @@ const createColBtn = document.querySelector('.create-task-btn')
 
 createColBtn.addEventListener('click', ()=>{
     let columnName = document.querySelector('.column-name').value.trim()
-
+    let initialHeight = 550
+    let currentHeight = initialHeight
     const taskDiv = document.createElement('div')
     taskDiv.classList.add('task')
 
@@ -119,6 +120,8 @@ createColBtn.addEventListener('click', ()=>{
     const taskPriority = document.createElement('div')
     taskPriority.classList.add('task-priority')
 
+    const taskName = document.createElement('h1')
+    taskName.classList.add('task-name')
 
     const taskUpperContent = document.createElement('div')
     taskUpperContent.classList.add('task-upper-content')
@@ -141,21 +144,38 @@ createColBtn.addEventListener('click', ()=>{
 
     const addTodoBtn = document.createElement('button')
     addTodoBtn.classList.add('add-todo-task')
+    addTodoBtn.textContent = 'Add Task'
 
     const binBtn = document.createElement('img')
     binBtn.classList.add('delete-task')
+    binBtn.src = "/img/3491495 1.png"
 
     function appendAll(){
-        taskDiv.append(taskContent)
-        taskContent.append(taskUpperContent)
-        taskUpperContent.append(taskPriority)
+        taskDiv.append(taskContent) // create main task div
+        /* upper content */
+        taskContent.append(taskUpperContent) // creating upper content
+        taskUpperContent.append(taskPriority) // adding priority
+        taskUpperContent.append(taskName)
+        /* upper content */
+
+        /* todo wrapper */
         taskContent.append(todoWrapper)
+        todoWrapper.append(todoDiv)
+        todoDiv.append(todoInp)
+        todoDiv.append(todoDel)
+        /* todo wrapper */
+
+        /* upper content */
         taskContent.append(taskLowerContent)
+        taskLowerContent.append(addTodoBtn)
+        taskLowerContent.append(binBtn)
+        /* upper content */
+
         tasksContainer.append(taskDiv)
     }
 
         if(columnName.length>0){
-            
+            taskName.textContent = columnName
             if(currentPrior.getAttribute('id')=='high'){
                 taskPriority.setAttribute('id','high')
                 popUp.classList.remove('active')
