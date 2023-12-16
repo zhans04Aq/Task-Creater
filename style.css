@@ -13,14 +13,16 @@ section{
 }
 
 .pop-up-window{
-    width: 350px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     background-color: #fFFFFF;
     align-self: center ;
     display: none;
     z-index: 999;
     padding: 2%;
     position: absolute;
+    border-radius: 10px;
+    border: 1px solid black;
 }
 
 .pop-up-wrapper{
@@ -30,10 +32,38 @@ section{
     flex-direction: column;
     justify-content: space-around;
     align-items:center;
+    gap: 5%;
 }
 
 .pop-up-content{
     height: 100%;
+}
+
+.pop-up-content h1{
+    font-family: Kumar One;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 53px;
+    letter-spacing: 0em;
+    color: #867877;
+    text-transform: uppercase;
+}    
+
+.column-name{
+    width: 365px;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 5%;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    box-shadow: 4px 4px 4px 0px #00000040;
+    font-family: KoPub Batang;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 12px;
+    letter-spacing: 0.11em;
+    text-align: left;
+
 }
 
 .active{
@@ -41,24 +71,50 @@ section{
 }
 
 .close-pop-up{
+    width: 125px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
     align-self:flex-end;
+    font-family: KoPub Batang;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.11em;
+    text-align: left;
+    background-color: white;
+    border-radius: 10px;
+
+
 }
 
 .addTaskBtn{
-    width: 150px;
-    height: 50px;
+    width: 250px;
+    height: 70px;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-family: KoPub Batang;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0.11em;
+    color: #0A1828;
     align-self:flex-end;
     position: fixed;
+    bottom: 10%;
 }
 
 #high{
-    background-color:red;
+    background-color:#D5645C;
 }
 #mid{
-    background-color:orange;
+    background-color: #E6DF41;
 }
 #low{
-    background-color:green;
+    background: #6EDB65;
+
 }
 
 .priority{
@@ -69,10 +125,17 @@ section{
     border-radius: 50px;
 }
 
+.priority div{
+    filter: drop-shadow(12px 8px 17px #0000003b);
+}
+
 .current-priority{
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
     border-radius: 50px;
+    background: #E6DF41;
+    box-shadow: 4px 4px 4px 0px #00000040;
+
 }
 .current-priority-wrapper{
     display: flex;
@@ -81,15 +144,34 @@ section{
     gap: 50px;
 }
 
+.current-priority-wrapper p{
+    font-family: KoPub Batang;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: left;
+}
+
 .choose-priotiry{
     width: 100%;
     display: flex;
+    margin-top: 5%;
     gap: 5%;
 }
 
 .create-task-btn{
     align-items: flex-end;
     justify-self: flex-end;
+    width: 350px;
+    height: 65px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px 0px #00000040;
+    font-family: KoPub Batang;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0.11em;
 }
 
 
