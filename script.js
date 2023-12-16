@@ -46,52 +46,13 @@ lowPrior.addEventListener('click', ()=>{
 /* add task functionality */
 
 
-/*  task del functionality */
-
-const delTask = document.querySelector('.delete-task')
-const taskWrapper = document.querySelector('.task-wrapper')
-
-delTask.addEventListener('click', ()=>{
-    const taskDiv = deleteTaskButton.closest('.task');
-        taskDiv.remove();
-})
-
-/*  task del functionality */
-
-/* todo functionality */
+/* whole task functionality */
 
 const addTodoTask = document.querySelector('.add-todo-task')
 const task = document.querySelector('.task')
 
 let initialHeight = 550
 let currentHeight = initialHeight
-
-// addTodoTask.addEventListener('click', ()=>{
-//     const todoWrapper = document.querySelector('.todo-wrapper')
-
-//     const todo = document.createElement('div')
-//     todo.classList.add('todo')
-
-//     const todoInp = document.createElement('input')
-//     todoInp.classList.add('todo-input')
-
-//     const delTodo = document.createElement('div')
-//     delTodo.classList.add('delete-todo')
-//     delTodo.textContent= '-'
-    
-//     delTodo.addEventListener('click', ()=>{
-//         todo.remove()
-//         currentHeight-=80
-//         task.style.height = currentHeight + 'px'
-//     })
-
-//     todo.append(todoInp)
-//     todo.append(delTodo)
-
-//     todoWrapper.append(todo)
-
-
-// })
 
 
 // Assuming there's a container for the tasks
@@ -130,6 +91,14 @@ tasksContainer.addEventListener('click', (event) => {
 
             currentHeight +=80
             task.style.height = currentHeight + 'px' 
+        }
+    }
+
+    if (event.target.classList.contains('delete-task')) {
+        const task = event.target.closest('.task');
+
+        if (task) {
+            task.remove();
         }
     }
 });
