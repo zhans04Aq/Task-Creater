@@ -74,7 +74,7 @@ tasksContainer.addEventListener('click', (event) => {
             delTodo.addEventListener('click', () => {
                 todo.remove();
                 if(currentHeight>550){
-                    currentHeight-=80
+                    currentHeight-=100
                 }
                 task.style.height = currentHeight + 'px' 
             });
@@ -84,7 +84,7 @@ tasksContainer.addEventListener('click', (event) => {
 
             todoWrapper.append(todo);
 
-            currentHeight +=80
+            currentHeight +=100
             task.style.height = currentHeight + 'px' 
         }
     }
@@ -98,7 +98,8 @@ tasksContainer.addEventListener('click', (event) => {
     }
 });
 
-
+initialHeight = 550
+currentHeight = initialHeight
 /* todo functionality */
 
 /* add task functionality */
@@ -108,9 +109,11 @@ const createColBtn = document.querySelector('.create-task-btn')
 
 
 createColBtn.addEventListener('click', ()=>{
+
+    initialHeight = 550
+    currentHeight = initialHeight
+
     let columnName = document.querySelector('.column-name').value.trim()
-    let initialHeight = 550
-    let currentHeight = initialHeight
     const taskDiv = document.createElement('div')
     taskDiv.classList.add('task')
 
@@ -193,8 +196,7 @@ createColBtn.addEventListener('click', ()=>{
             }
         } else {
             alert('column name is empty')
-        }    
-        
+        }
 })
 
 /* add task functionality */

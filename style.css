@@ -179,10 +179,13 @@ section{
 .task-wrapper{
     width: 100%;
     height: 100%;
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-
+    justify-content: space-around; */
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-auto-columns: auto;
+    grid-auto-rows: auto;
 }
 
 .todo-wrapper {
@@ -243,7 +246,7 @@ section{
     align-self: flex-start;
     transition: all 0.5s;
     border-radius: 10px;
-
+    margin-bottom: 10%;
 }
 
 .task-content{
