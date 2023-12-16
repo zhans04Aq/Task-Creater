@@ -11,7 +11,7 @@ const currentPrior = document.querySelector('.current-priority')
 
 const createButton = document.querySelector('.create-task-btn')
 
-let columnName = document.querySelector('.column-name')
+
 
 /* open pop up functionality */
 
@@ -39,11 +39,6 @@ lowPrior.addEventListener('click', ()=>{
     currentPrior.setAttribute('id', 'low')
 })
 /* open pop up functionality */
-
-/* add task functionality */
-
-
-/* add task functionality */
 
 
 /* whole task functionality */
@@ -106,3 +101,80 @@ tasksContainer.addEventListener('click', (event) => {
 
 /* todo functionality */
 
+/* add task functionality */
+
+
+const createColBtn = document.querySelector('.create-task-btn')
+
+
+createColBtn.addEventListener('click', ()=>{
+    let columnName = document.querySelector('.column-name').value.trim()
+
+    const taskDiv = document.createElement('div')
+    taskDiv.classList.add('task')
+
+    const taskContent = document.createElement('div')
+    taskContent.classList.add('task-content')
+    
+    const taskPriority = document.createElement('div')
+    taskPriority.classList.add('task-priority')
+
+
+    const taskUpperContent = document.createElement('div')
+    taskUpperContent.classList.add('task-upper-content')
+
+    const taskLowerContent = document.createElement('div')
+    taskLowerContent.classList.add('task-lower-content')
+
+    const todoWrapper = document.createElement('div')
+    todoWrapper.classList.add('todo-wrapper')
+
+    const todoDiv = document.createElement('div')
+    todoDiv.classList.add('todo')
+
+    const todoInp = document.createElement('input')
+    todoInp.classList.add('todo-input')
+
+    const todoDel = document.createElement('div')
+    todoDel.classList.add('delete-todo')
+    todoDel.textContent = '-'
+
+    const addTodoBtn = document.createElement('button')
+    addTodoBtn.classList.add('add-todo-task')
+
+    const binBtn = document.createElement('img')
+    binBtn.classList.add('delete-task')
+
+    function appendAll(){
+        taskDiv.append(taskContent)
+        taskContent.append(taskUpperContent)
+        taskUpperContent.append(taskPriority)
+        taskContent.append(todoWrapper)
+        taskContent.append(taskLowerContent)
+        tasksContainer.append(taskDiv)
+    }
+
+        if(columnName.length>0){
+            
+            if(currentPrior.getAttribute('id')=='high'){
+                taskPriority.setAttribute('id','high')
+                popUp.classList.remove('active')
+                appendAll()
+            } else if (currentPrior.getAttribute('id')=='mid'){
+                taskPriority.setAttribute('id','mid')
+                popUp.classList.remove('active')
+                appendAll()
+            } else if (currentPrior.getAttribute('id') == 'low'){
+                taskPriority.setAttribute('id','low')
+                popUp.classList.remove('active')
+                appendAll()
+            } else {
+                alert('didn`t append')
+            }
+        } else {
+            alert('column name is empty')
+        }    
+        
+})
+
+/* add task functionality */
