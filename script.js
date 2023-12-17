@@ -168,11 +168,11 @@ createColBtn.addEventListener('click', ()=>{
         todoDiv.append(todoDel)
         /* todo wrapper */
 
-        /* upper content */
+        /* lower content */
         taskContent.append(taskLowerContent)
         taskLowerContent.append(addTodoBtn)
         taskLowerContent.append(binBtn)
-        /* upper content */
+        /* lower content */
 
         tasksContainer.append(taskDiv)
     }
